@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epambycom/applience/tblPC"
+        xmlns:lptp="http://epambycom/applience/tblPC"
+        elementFormDefault="unqualified">
+
+    <complexType name="tabletPCType">
+        <sequence>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="battery-capacity">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="20000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="display-inch">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="memory-rom">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="20000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="flash-memory-capasity">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="20000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="color">
+                <simpleType>
+                    <restriction base="string">
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+</schema>

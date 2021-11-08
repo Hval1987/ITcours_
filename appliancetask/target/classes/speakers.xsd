@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epambycom/applience/spcr"
+        xmlns:lptp="http://epambycom/applience/spcr"
+        elementFormDefault="unqualified">
+    <complexType name="speakersType">
+        <sequence>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="power-consumtion">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="number-of-speakers">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="100"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="frequence-range"/>
+            <element name="cord-length">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+</schema>

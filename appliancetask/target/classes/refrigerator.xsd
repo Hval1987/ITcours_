@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epambycom/applience/rfrg"
+        xmlns:rfrg="http://epambycom/applience/rfrg">
+    <complexType name="refrigeratorType">
+        <sequence>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="power-consumption">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="weight">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="freezer-capasity">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="overal-capacity">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="height">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+            <element name="width">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+</schema>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<app:schema xmlns:app="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://epambycom/applience/"
+             xmlns:tns="http://epambycom/applience/"
+             xmlns:ovn="http://epambycom/applience/ovn"
+             xmlns:lptp="http://epambycom/applience/lptp"
+             xmlns:rfrg="http://epambycom/applience/rfrg"
+             xmlns:vccl="http://epambycom/applience/vccl"
+             xmlns:tbPC="http://epambycom/applience/tblPC"
+             xmlns:spcr="http://epambycom/applience/spcr"
+             elementFormDefault="qualified" >
+    <app:import schemaLocation="oven.xsd" namespace="http://epambycom/applience/ovn"/>
+    <app:import schemaLocation="laptop.xsd" namespace="http://epambycom/applience/lptp"/>
+    <app:import schemaLocation="refrigerator.xsd" namespace="http://epambycom/applience/rfrg"/>
+    <app:import schemaLocation="vc_cleaner.xsd" namespace="http://epambycom/applience/vccl"/>
+    <app:import schemaLocation="tabletPC.xsd" namespace="http://epambycom/applience/tblPC"/>
+    <app:import schemaLocation="speakers.xsd" namespace="http://epambycom/applience/spcr"/>
+
+    <app:element name="applianced">
+           <app:complexType>
+                  <app:sequence>
+                      <app:element name="ovens">
+                           <app:complexType >
+                              <app:sequence>
+                                   <app:element name="oven"  type="ovn:ovenType"
+                                        minOccurs="1"
+                                        maxOccurs="unbounded"/>
+                              </app:sequence>
+                           </app:complexType>
+                      </app:element>
+
+                      <app:element name="laptops">
+                          <app:complexType >
+                              <app:sequence>
+                                    <app:element name="laptop" type="lptp:laptopType"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                              </app:sequence>
+                          </app:complexType>
+                      </app:element>
+
+                      <app:element name="refrigerators">
+                          <app:complexType >
+                              <app:sequence>
+
+                                    <app:element name="refrigerator"  type="rfrg:refrigeratorType"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                              </app:sequence>
+                          </app:complexType>
+                      </app:element>
+
+                     <app:element name="vacuum-cleaners">
+                          <app:complexType >
+                               <app:sequence>
+
+                                    <app:element name="vacuum-cleaner"  type="vccl:vc-cleanerType"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                               </app:sequence>
+                          </app:complexType>
+                     </app:element>
+
+                     <app:element name="tabletPCes">
+                          <app:complexType >
+                                <app:sequence>
+                                     <app:element name="tabletPC"  type="tbPC:tabletPCType"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                                </app:sequence>
+                          </app:complexType>
+                     </app:element>
+                     <app:element name="speakers">
+                          <app:complexType >
+                                <app:sequence>
+                                    <app:element name="speaker"  type="spcr:speakersType"
+                                    minOccurs="1"
+                                    maxOccurs="unbounded"/>
+                                </app:sequence>
+                          </app:complexType>
+                     </app:element>
+
+                  </app:sequence>
+           </app:complexType>
+     </app:element>
+
+</app:schema>
+

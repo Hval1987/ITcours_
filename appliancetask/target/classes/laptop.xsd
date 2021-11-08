@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epambycom/applience/lptp"
+        xmlns:lptp="http://epambycom/applience/lptp"
+        elementFormDefault="unqualified">
+    <complexType name="laptopType">
+        <sequence>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+
+
+
+            <element name="battery-capacity">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="0"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="os">
+                <simpleType>
+                    <restriction base="string"/>
+                </simpleType>
+            </element>
+            <element name="memory-rom">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="24000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="system-memory">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="cpu">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="display-inch">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+</schema>

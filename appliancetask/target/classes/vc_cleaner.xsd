@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding ="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epambycom/applience/vccl"
+        xmlns:lptp="http://epambycom/applience/vccl"
+        elementFormDefault="unqualified">
+    <complexType name="vc-cleanerType">
+        <sequence>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="power-consumption">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="1000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="filter-type">
+                <simpleType>
+                    <restriction base="string">
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="bag-type">
+                <simpleType>
+                    <restriction base="string">
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="wand-type">
+                <simpleType>
+                    <restriction base="string">
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="motor-speed-regulation">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="cleaning-width">
+                <simpleType>
+                    <restriction base="integer">
+                        <minExclusive value="1"/>
+                        <maxExclusive value="10000"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="int" use="required" />
+    </complexType>
+</schema>
