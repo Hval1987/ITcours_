@@ -33,30 +33,24 @@ public class DomParser {
             Element root = document.getDocumentElement();
                 NodeList ovensNodes = root.getElementsByTagName("app:oven");
                 createOvenList(appliancedList, ovensNodes);
-                //System.out.println();
-                //ystem.out.println(appliancedList.size());
-
+                
                 NodeList laptopsNode = root.getElementsByTagName("app:laptop");
                 createLaptopList(appliancedList, laptopsNode);
                 System.out.println();
-                //System.out.println(appliancedList.size());
+                
 
                 NodeList refrigeratorNode = root.getElementsByTagName("app:refrigerator");
                 createRefrigeratorList(appliancedList,refrigeratorNode);
-                //System.out.println();
-
+               
                 NodeList vcCleanerNode=root.getElementsByTagName("app:vacuum-cleaner");
                 createVcCleanerList(appliancedList,vcCleanerNode);
-                //System.out.println();
+               
 
                 NodeList tabletPCNode=root.getElementsByTagName("app:tabletPC");
                 createTabletPCList(appliancedList,tabletPCNode);
-                //System.out.println();
-
+               
                 NodeList speakersNode=root.getElementsByTagName("app:speaker");
                 appliancedList=createSpeakerList(appliancedList,speakersNode);
-                //System.out.println();
-                //System.out.println("кол-во элементов в списке- "+appliancedList.size());
                 return appliancedList;
 
            }
@@ -83,8 +77,6 @@ public class DomParser {
             fillOven.setDepts(Integer.parseInt(getSingleChild(oven_element,"dept").getTextContent().trim()));
             fillOven.setHeight(Double.parseDouble(getSingleChild(oven_element,"height").getTextContent().trim()));
             fillOven.setDepts(Double.parseDouble(getSingleChild(oven_element,"width").getTextContent().trim()));
-            //System.out.println(fillOven);
-
             appliancedList.add(fillOven);
             fillOven = null;
 
@@ -111,8 +103,6 @@ public class DomParser {
             fillLaptop.setSystem_memory(Integer.parseInt(getSingleChild(laptop_element,"system-memory").getTextContent().trim()));
             fillLaptop.setCpu(Double.parseDouble(getSingleChild(laptop_element,"cpu").getTextContent().trim()));
             fillLaptop.setDisplay_inch(Double.parseDouble(getSingleChild(laptop_element,"display-inch").getTextContent().trim()));
-
-            //System.out.println(fillLaptop);
             appliancedList.add(fillLaptop);
             fillLaptop=null;
 
@@ -135,8 +125,6 @@ public class DomParser {
             fillRefrigerator.setOveralCapacity(Double.parseDouble(getSingleChild(refrElement,"overal-capacity").getTextContent().trim()));
             fillRefrigerator.setHeight(Double.parseDouble(getSingleChild(refrElement,"height").getTextContent().trim()));
             fillRefrigerator.setWidth(Double.parseDouble(getSingleChild(refrElement,"height").getTextContent().trim()));
-
-            //System.out.println(fillRefrigerator);
             appliancedList.add(fillRefrigerator);
             fillRefrigerator=null;
 
@@ -161,8 +149,6 @@ public class DomParser {
             fillVcCleaner.setWandType(getSingleChild(vcCleanElement,"wand-type").getTextContent().trim());
             fillVcCleaner.setMotorSpeedRegulation(Integer.parseInt(getSingleChild(vcCleanElement,"motor-speed-regulation").getTextContent().trim()));
             fillVcCleaner.setCleaningWidth(Integer.parseInt(getSingleChild(vcCleanElement,"cleaning-width").getTextContent().trim()));
-
-            //System.out.println(fillVcCleaner);
             appliancedList.add(fillVcCleaner);
             fillVcCleaner=null;
         }
@@ -185,8 +171,6 @@ public class DomParser {
             fillTabletPC.setMemoryRom(Integer.parseInt(getSingleChild(tabletPCElement,"memory-rom").getTextContent().trim()));
             fillTabletPC.setMemoryCapacity(Integer.parseInt(getSingleChild(tabletPCElement,"memory-rom").getTextContent().trim()));
             fillTabletPC.setColor(getSingleChild(tabletPCElement,"memory-rom").getTextContent().trim());
-
-            //System.out.println(fillTabletPC);
             appliancedList.add(fillTabletPC);
             fillTabletPC=null;
 
@@ -208,8 +192,6 @@ public class DomParser {
                 fillSpeakers.setPowerConsumption(Integer.parseInt(getSingleChild(speakersElement,"power-consumtion").getTextContent().trim()));
                 fillSpeakers.setNumberOfSpeakers(Integer.parseInt(getSingleChild(speakersElement,"number-of-speakers").getTextContent().trim()));
                 fillSpeakers.setFrequanseRange(getSingleChild(speakersElement,"frequence-range").getTextContent().trim());
-
-                //System.out.println(fillSpeakers);
                 appliancedList.add(fillSpeakers);
                 fillSpeakers=null;
             }
