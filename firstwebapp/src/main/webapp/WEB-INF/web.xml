@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+
+  <listener>
+    <listener-class>by.http.autopark.listener.ConnectionPoolListener</listener-class>
+
+  </listener>
+  <listener>
+    <listener-class>by.http.autopark.listener.MessageBundleListener</listener-class>
+  </listener>
+  <error-page>
+       <exception-type>java.lang.RuntimeException</exception-type>
+    <location>/RuntimeException.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+       <location>/RuntimeException.jsp</location>
+  </error-page>
+
+<display-name>Archetype Created Web Application</display-name>
+
+
+  <servlet>
+    <servlet-name>Controller</servlet-name>
+    <servlet-class>by.http.autopark.controller.Controller</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Controller</servlet-name>
+    <url-pattern>/Controller</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <display-name>RequestLoggingFilter</display-name>
+    <filter-name>RequestLoggingFilter</filter-name>
+    <filter-class>by.http.autopark.filter.RequestLoggingFilter</filter-class>
+  </filter>
+  <filter>
+    <display-name>CharsetFilter</display-name>
+    <filter-name>CharsetFilter</filter-name>
+    <filter-class>
+        by.http.autopark.filter.CharsetFilter
+    </filter-class>
+    <init-param>
+      <param-name>characterEncoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+
+  </filter>
+  <filter-mapping>
+    <filter-name>CharsetFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>RequestLoggingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+
+  </filter-mapping>
+
+</web-app>
