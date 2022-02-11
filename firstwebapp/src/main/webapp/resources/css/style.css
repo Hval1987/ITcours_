@@ -1,0 +1,220 @@
+
+
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 690px;
+    font-family: "Comic Sans MS"
+}
+.block {
+    width: 300px;
+    padding: 32px;
+    border-radius:2px;
+    box-shadow:0 4px 16px ;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-family: "Comic Sans MS"
+}
+.form_title {
+    text-align: center;
+    margin: 30px 0 32px 0;
+    font-weight: normal;
+    font-family: "Comic Sans MS"
+}
+.form_button {
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color :#fff ;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button_add {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color :#fff ;
+    background-color: #0a8c00;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button_delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color :#fff ;
+    background-color: #ee5746;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button_lang{
+    width: 60px;
+    border: #659191;
+    height:25px;
+
+    box-shadow:5px -5px 2px ;
+    padding: 5px 15px;
+
+    border-radius: 20px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-size: 10px ;
+    color : #000000;
+    background-color: #ccefee;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+
+}
+.form_button_lang:hover{
+    background: #4b99ff;
+
+}
+
+.form_grup {
+    margin: 0;
+    position: relative;
+    margin-bottom: 24px;
+}
+.message{color: #ce0606;
+
+
+    margin:10px;
+
+
+}
+.introduce{
+    color: #252525;
+    font-size: 30px;
+    line-height:1.6;
+    font-family: "Miama Nueva";
+
+
+    margin: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+#header {
+    background: url("../image/img5.jpg");
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.language{
+
+height: 5px;
+    width: 30px;
+    margin-top:-50px;
+    margin-left: 95%;
+
+
+}
+
+
+
+#header ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+    margin-top:75px; /*делаем отступ сверху*/
+    background: #224fd0; /*добавляем фон всему меню*/
+    height: 0px; /*задаем высоту*/
+}
+#header  a {
+    width: 180px;
+
+
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+    background:  #224fd0; /*добавляем фон к пункту меню*/
+    color:#fff; /*меняем цвет ссылок*/
+    padding:0px 15px; /*добавляем отступ*/
+    font-family: arial; /*меняем шрифт*/
+    line-height:50px; /*ровняем меню по вертикали*/
+    display: block;
+    border-right: 1px solid #0f1734; /*добавляем бордюр справа*/
+    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,1);
+}
+#header a:hover {
+    background: #0f1c3d;/*добавляем эффект при наведении*/
+}
+
+
+#header li {
+    float:left; /*Размещаем список горизонтально для реализации меню*/
+    position:relative; /*задаем позицию для позиционирования*/
+}
+
+/*Стили для скрытого выпадающего меню*/
+#header li > ul {
+
+
+    position:absolute;
+    top:-25px;
+
+    display:none;
+}
+
+/*Делаем скрытую часть видимой*/
+#header li:hover>ul {
+
+    display:block;
+    width:250px;  /*Задаем ширину выпадающего меню*/
+}
+#header li:hover > #header ul > li {
+    float:none; /*Убираем горизонтальное позиционирование*/
+}
+
+#main {
+    background: url("../image/context.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top:125px;
+    width: 100%;
+    height: 620px;
+    background-size: cover;
+
+}
+
+table {
+    border: 1px solid black;
+    width: 70%;
+    border-collapse: collapse;
+
+}
+th { height: 50px; }
+tr:hover { background-color: #90ddff }
+
+
+
+
