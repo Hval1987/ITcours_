@@ -1,0 +1,255 @@
+CREATE TABLE approved_order (
+	id INTEGER NOT NULL,
+	id_assigned_car INTEGER NOT NULL,
+	status VARCHAR(45) NOT NULL,
+	id_manager INTEGER NOT NULL,
+	id_driver INTEGER NOT NULL,
+	id_employer VARCHAR(45) NOT NULL,
+	id_order INTEGER NOT NULL,
+	date VARCHAR(45),
+	PRIMARY KEY (id)
+);
+CREATE TABLE car (
+	id INTEGER NOT NULL,
+	transport_type VARCHAR(45) NOT NULL,
+	driverId INTEGER NOT NULL,
+	regNumber VARCHAR(45) NOT NULL,
+	available VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE damage (
+	id INTEGER NOT NULL,
+	content VARCHAR(45),
+	car_idNumber INTEGER NOT NULL,
+	users_id INTEGER NOT NULL,
+	status VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE "order" (
+	id INTEGER NOT NULL,
+	transport_type VARCHAR(45) NOT NULL,
+	employer_id INTEGER NOT NULL,
+	date VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE role (
+	id INTEGER NOT NULL,
+	tittle VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE user (
+	id INTEGER NOT NULL,
+	login VARCHAR(45) NOT NULL,
+	roles_id INTEGER NOT NULL,
+	email VARCHAR(45) NOT NULL,
+	passportNumber VARCHAR(45),
+	userPassword VARCHAR(45) NOT NULL,
+	name VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (1, 1, 'COMPLITED', 6, 15, '5', 1, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (2, 4, 'IN_PROCESS', 6, 4, '2', 2, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (3, 3, 'COMPLITED', 6, 15, '4', 3, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (5, 2, 'dg', 2, 1, '3', 2, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (6, 3, 'in ', 5, 2, '1', 3, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (8, 1, 'in progress', 1, 4, '1', 3, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (9, 5, 'in progress', 1, 4, '1', 3, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (10, 1, 'in progress', 1, 4, '2', 4, '12.3.3634');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (11, 1, 'in progress', 1, 4, '1', 3, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (12, 1, 'in progress', 1, 4, '1', 3, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (13, 1, 'in progress', 1, 4, '1', 6, '12.3.3634');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (14, 1, 'in progress', 1, 4, '2', 4, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (15, 1, 'in progress', 1, 4, '2', 4, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (16, 1, 'in progress', 1, 4, '1', 3, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (17, 4, 'in progress', 1, 4, '2', 2, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (18, 2, 'in progress', 1, 4, '1', 1, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (19, 1, 'in progress', 1, 4, '1', 3, '2023-06-29');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (20, 4, 'in progress', 1, 4, '2', 2, '12.3.3634');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (21, 1, 'in progress', 1, 4, '1', 3, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (22, 4, 'in progress', 1, 4, '2', 2, '2022-01-20');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (23, 2, 'in progress', 1, 1, '1', 1, '12.3.3634');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (24, 32, 'COMPLITED', 15, 15, '2', 4, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (25, 8, 'IN_PROCESS', 15, 15, '2', 37, '2022-01-20');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (26, 2, 'IN_PROCESS', 15, 1, '1', 1, '23.5.2021');
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (27, 2, 'IN_PROCESS', 18, 1, '1', 1, null);
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (28, 4, 'IN_PROCESS', 1, 15, '2', 2, null);
+INSERT INTO approved_order(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (30, 2, 'IN_PROCESS', 20, 1, '1', 1, null);
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (1, 'truck', 15, '¿Õ 5115-5', 'FAULTY');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (2, 'bus', 1, '¿  7494-5', 'SERVISEABLE');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (3, 'mixer', 1, '¿¬ 1432-5', 'SERVISEABLE');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (4, 'passenger_car', 15, '¿¬ 0847-5', 'FAULTY');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (5, 'truck', 15, '¿– 2315-5', 'SERVISEABLE');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (8, 'car', 15, '¿œ 4555-5', 'FAULTY');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (32, 'truck', 15, '¬œ 7845-5', 'SERVISEABLE');
+INSERT INTO car(id, transport_type, driverId, regNumber, available) VALUES (84, 'bus', 5, 'ŒŒ 012345-0', 'FAULTY');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (1, 'bus', 1, '12.4.2424');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (2, 'passenger_car', 2, '12.3.3634');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (3, 'truck', 1, '23.5.2021');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (4, 'truck', 2, '23.5.2022');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (6, 'truck', 1, '2021-12-01');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (37, 'car', 2, '2022-01-20');
+INSERT INTO `order`(id, transport_type, employer_id, date) VALUES (38, 'crane', 2, '2022-01-01');
+INSERT INTO role(id, tittle) VALUES (1, 'Employer');
+INSERT INTO role(id, tittle) VALUES (2, 'driver');
+INSERT INTO role(id, tittle) VALUES (3, 'Dispatcher');
+INSERT INTO role(id, tittle) VALUES (4, 'Admin');
+INSERT INTO role(id, tittle) VALUES (5, 'Admin2');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (1, 'John', 1, 'john@gmail.com', 'Ã— 4258545', '1', 'John');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (2, 'Mike', 1, 'mike@ya.ru', 'Ã— 7854165', '935785', 'Mike');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (3, 'Ivan', 2, 'vanua@ya.ru', 'Ã— 4583212', '347347', 'Ival');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (4, 'Leonid', 2, 'lenya@ya.ru', 'ÃŒ 7126578', '377257', 'Lenya');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (5, 'Sergey', 2, 'serega@tut.by', 'Ã— 1257545', '837445', 'Sergey');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (6, 'Evgeniy', 3, 'evg@mail.ru', 'Ã¿ 3254578', '525634', 'Evgeniy');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (15, 'Valery', 2, 'hval2006@ya.ru', 'MC 1233333', '0', 'Valera');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (17, 'valera', 2, 'h', 'John', '2', 'Valera');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (18, 'ƒË‡Ì‡', 3, '¬', 'John', '4', 'Diana');
+INSERT INTO user(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (20, 'admin', 3, 'adm@ya.ru', '1332412412gh', 'admin', 'Admin');
+ALTER TABLE approved_order
+	ADD FOREIGN KEY (id_manager) 
+	REFERENCES user (id);
+
+ALTER TABLE approved_order
+	ADD FOREIGN KEY (id_driver) 
+	REFERENCES user (id);
+
+ALTER TABLE approved_order
+	ADD FOREIGN KEY (id_assigned_car) 
+	REFERENCES car (id);
+
+ALTER TABLE approved_order
+	ADD FOREIGN KEY (id_order) 
+	REFERENCES "order" (id);
+
+
+ALTER TABLE damage
+	ADD FOREIGN KEY (car_idNumber) 
+	REFERENCES car (id);
+
+ALTER TABLE damage
+	ADD FOREIGN KEY (users_id) 
+	REFERENCES user (id);
+
+
+ALTER TABLE "order"
+	ADD FOREIGN KEY (employer_id) 
+	REFERENCES user (id);
+
+
+ALTER TABLE user
+	ADD FOREIGN KEY (roles_id) 
+	REFERENCES role (id);
+
+
+
+
+
+__________________________________
+
+CREATE TABLE park."approved_order" (
+	id INTEGER NOT NULL,
+	id_assigned_car INTEGER NOT NULL,
+	status VARCHAR(45) NOT NULL,
+	id_manager INTEGER NOT NULL,
+	id_driver INTEGER NOT NULL,
+	id_employer VARCHAR(45) NOT NULL,
+	id_order INTEGER NOT NULL,
+	date VARCHAR(45),
+	PRIMARY KEY (id)
+);
+CREATE TABLE park."car" (
+	id INTEGER NOT NULL,
+	transport_type VARCHAR(45) NOT NULL,
+	driverId INTEGER NOT NULL,
+	regNumber VARCHAR(45) NOT NULL,
+	available VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE park."damage" (
+	id INTEGER NOT NULL,
+	content VARCHAR(45),
+	car_idNumber INTEGER NOT NULL,
+	users_id INTEGER NOT NULL,
+	status VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE park."order" (
+	id INTEGER NOT NULL,
+	transport_type VARCHAR(45) NOT NULL,
+	employer_id INTEGER NOT NULL,
+	date VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE park."role" (
+	id INTEGER NOT NULL,
+	tittle VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+CREATE TABLE park."user" (
+	id INTEGER NOT NULL,
+	login VARCHAR(45) NOT NULL,
+	roles_id INTEGER NOT NULL,
+	email VARCHAR(45) NOT NULL,
+	passportNumber VARCHAR(45),
+	userPassword VARCHAR(45) NOT NULL,
+	name VARCHAR(45) NOT NULL,
+	PRIMARY KEY (id)
+);
+INSERT INTO park."approved_order"(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (1, 1, 'COMPLITED', 6, 15, '5', 1, '23.5.2021');
+INSERT INTO park."approved_order"(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (2, 4, 'IN_PROCESS', 6, 4, '2', 2, '23.5.2021');
+INSERT INTO park."approved_order"(id, id_assigned_car, status, id_manager, id_driver, id_employer, id_order, date) VALUES (3, 3, 'COMPLITED', 6, 15, '4', 3, '2023-06-29');
+
+
+INSERT INTO park."car"(id, transport_type, driverId, regNumber, available) VALUES (1, 'truck', 15, '¿Õ 5115-5', 'FAULTY');
+INSERT INTO park."car"(id, transport_type, driverId, regNumber, available) VALUES (2, 'bus', 1, '¿  7494-5', 'SERVISEABLE');
+INSERT INTO park."car"(id, transport_type, driverId, regNumber, available) VALUES (3, 'mixer', 1, '¿¬ 1432-5', 'SERVISEABLE');
+
+INSERT INTO park.`order`(id, transport_type, employer_id, date) VALUES (1, 'bus', 1, '12.4.2424');
+INSERT INTO park.`order`(id, transport_type, employer_id, date) VALUES (2, 'passenger_car', 2, '12.3.3634');
+INSERT INTO park.`order`(id, transport_type, employer_id, date) VALUES (3, 'truck', 1, '23.5.2021');
+INSERT INTO park.`order`(id, transport_type, employer_id, date) VALUES (4, 'truck', 2, '23.5.2022');
+
+INSERT INTO park."role"(id, tittle) VALUES (1, 'Employer');
+INSERT INTO park."role"(id, tittle) VALUES (2, 'driver');
+INSERT INTO park."role"(id, tittle) VALUES (3, 'Dispatcher');
+INSERT INTO park."role"(id, tittle) VALUES (4, 'Admin');
+
+INSERT INTO park."user"(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (1, 'John', 1, 'john@gmail.com', 'Ã— 4258545', '1', 'John');
+INSERT INTO park."user"(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (2, 'Mike', 1, 'mike@ya.ru', 'Ã— 7854165', '935785', 'Mike');
+INSERT INTO park."user"(id, login, roles_id, email, passportNumber, userPassword, name) VALUES (3, 'Ivan', 2, 'vanua@ya.ru', 'Ã— 4583212', '347347', 'Ival');
+
+ALTER TABLE park."approved_order"
+	ADD FOREIGN KEY (id_manager) 
+	REFERENCES user (id);
+
+ALTER TABLE park."approved_order"
+	ADD FOREIGN KEY (id_driver) 
+	REFERENCES user (id);
+
+ALTER TABLE park."approved_order"
+	ADD FOREIGN KEY (id_assigned_car) 
+	REFERENCES car (id);
+
+ALTER TABLE park."approved_order"
+	ADD FOREIGN KEY (id_order) 
+	REFERENCES "order" (id);
+
+
+ALTER TABLE park."damage"
+	ADD FOREIGN KEY (car_idNumber) 
+	REFERENCES car (id);
+
+ALTER TABLE park."damage"
+	ADD FOREIGN KEY (users_id) 
+	REFERENCES user (id);
+
+
+ALTER TABLE park."order"
+	ADD FOREIGN KEY (employer_id) 
+	REFERENCES user (id);
+
+
+ALTER TABLE park."user"
+	ADD FOREIGN KEY (roles_id) 
+	REFERENCES role (id);
+
+
